@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2ADA6452-5169-4019-82B3-59C8AD7DF900}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nop.Services</RootNamespace>
+    <AssemblyName>Nop.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.0.4\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Categories\IL_TO_CONFIRMService.cs" />
+    <Compile Include="Categories\IReportInventoryService.cs" />
+    <Compile Include="Categories\IReportSrapRateService.cs" />
+    <Compile Include="Categories\IWoConfirmTOService.cs" />
+    <Compile Include="Categories\IWoConfirmService.cs" />
+    <Compile Include="Categories\L_TO_CONFIRMService.cs" />
+    <Compile Include="Categories\ReportInventoryService.cs" />
+    <Compile Include="Categories\ReportSrapRateService.cs" />
+    <Compile Include="Categories\WoConfirmTOService.cs" />
+    <Compile Include="Categories\WoConfirmService.cs" />
+    <Compile Include="Categories\SN_PRODUCTService.cs" />
+    <Compile Include="Categories\ISN_PRODUCTService.cs" />
+    <Compile Include="Categories\SN_DepartmentService.cs" />
+    <Compile Include="Categories\ISN_DepartmentService.cs" />
+    <Compile Include="Categories\ISN_OPTIONService.cs" />
+    <Compile Include="Categories\ISN_STATUSService.cs" />
+    <Compile Include="Categories\ISN_CONTROL_LOGService.cs" />
+    <Compile Include="Categories\ISN_CONTROLService.cs" />
+    <Compile Include="Categories\Il_os_failure_detectionService.cs" />
+    <Compile Include="Categories\Il_os_scrap_reasonService.cs" />
+    <Compile Include="Categories\Il_os_reason_functionService.cs" />
+    <Compile Include="Categories\Il_os_failure_codeService.cs" />
+    <Compile Include="Categories\Il_os_cc_functionService.cs" />
+    <Compile Include="Categories\SN_OPTIONService.cs" />
+    <Compile Include="Categories\SN_STATUSService.cs" />
+    <Compile Include="Categories\SN_CONTROL_LOGService.cs" />
+    <Compile Include="Categories\SN_CONTROLService.cs" />
+    <Compile Include="Categories\LineService.cs" />
+    <Compile Include="Categories\DepartmentService.cs" />
+    <Compile Include="Categories\ILineService.cs" />
+    <Compile Include="Categories\IDepartmentService.cs" />
+    <Compile Include="Categories\l_os_scrap_reasonService.cs" />
+    <Compile Include="Categories\l_os_reason_functionService.cs" />
+    <Compile Include="Categories\l_os_failure_detectionService.cs" />
+    <Compile Include="Categories\l_os_failure_codeService.cs" />
+    <Compile Include="Categories\PartternService.cs" />
+    <Compile Include="Categories\IPartternService.cs" />
+    <Compile Include="Categories\ICategoryService.cs" />
+    <Compile Include="Categories\IBOM_INFOService.cs" />
+    <Compile Include="Categories\IRR_TOOL_INFOService.cs" />
+    <Compile Include="Categories\ISectionsService.cs" />
+    <Compile Include="Categories\IWHCodeService.cs" />
+    <Compile Include="Categories\IWH_STORAGE_INFOService.cs" />
+    <Compile Include="Categories\l_os_cc_functionService.cs" />
+    <Compile Include="Categories\ReasonService.cs" />
+    <Compile Include="Categories\IReasonService.cs" />
+    <Compile Include="Categories\CategoryService.cs" />
+    <Compile Include="Categories\RR_TOOL_INFOService.cs" />
+    <Compile Include="Categories\SectionsService.cs" />
+    <Compile Include="Categories\BOM_INFOService.cs" />
+    <Compile Include="Categories\WHCodeService.cs" />
+    <Compile Include="Categories\StatusService.cs" />
+    <Compile Include="Categories\IStatusService.cs" />
+    <Compile Include="Categories\StorageCodeService.cs" />
+    <Compile Include="Categories\FACTORYService.cs" />
+    <Compile Include="Categories\IStorageCodeService.cs" />
+    <Compile Include="Categories\IFACTORYService.cs" />
+    <Compile Include="Categories\WH_STORAGE_INFOService.cs" />
+    <Compile Include="Logging\ISystemLogService.cs" />
+    <Compile Include="Logging\IMG_TYPE_ACTIONService.cs" />
+    <Compile Include="Logging\IMG_HISTORY_ACTIONService.cs" />
+    <Compile Include="Logging\IMG_HISTORY_LOGINService.cs" />
+    <Compile Include="Logging\SystemLogService.cs" />
+    <Compile Include="Logging\MG_TYPE_ACTIONService.cs" />
+    <Compile Include="Logging\MG_HISTORY_ACTIONService.cs" />
+    <Compile Include="Logging\MG_HISTORY_LOGINService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Authorize\IMG_USERService.cs" />
+    <Compile Include="Authorize\MG_USERService.cs" />
+    <Compile Include="Settings\ISN_CONFIGService.cs" />
+    <Compile Include="Settings\IMG_CONFIGService.cs" />
+    <Compile Include="Settings\SN_CONFIGService.cs" />
+    <Compile Include="Settings\MG_CONFIGService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nop.Core\Nop.Core.csproj">
+      <Project>{3edaa3bb-5739-42df-aea8-cf2e47b997d9}</Project>
+      <Name>Nop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nop.Data\Nop.Data.csproj">
+      <Project>{dc2f7ead-3a4a-43eb-9ec7-37b31d8f2570}</Project>
+      <Name>Nop.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Staffs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

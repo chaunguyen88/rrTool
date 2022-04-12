@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC2F7EAD-3A4A-43EB-9EC7-37B31D8F2570}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nop.Data</RootNamespace>
+    <AssemblyName>Nop.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataReaderExtensions.cs" />
+    <Compile Include="DbContextExtensions.cs" />
+    <Compile Include="EfDataProviderManager.cs" />
+    <Compile Include="EfRepository.cs" />
+    <Compile Include="EfStartUpTask.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IDbContext.cs" />
+    <Compile Include="Mapping\Authorize\MG_ROLEMap.cs" />
+    <Compile Include="Mapping\Categories\BOM_INFOMap.cs" />
+    <Compile Include="Mapping\Categories\L_TO_CONFIRMMap.cs" />
+    <Compile Include="Mapping\Categories\ReportInventoryMap.cs" />
+    <Compile Include="Mapping\Categories\ReportSrapRateMap.cs" />
+    <Compile Include="Mapping\Categories\WO_CONFIRM_TOMap.cs" />
+    <Compile Include="Mapping\Categories\WO_CONFIRMMap.cs" />
+    <Compile Include="Mapping\Categories\SN_DEPARTMENTMap.cs" />
+    <Compile Include="Mapping\Categories\SN_OPTIONMap.cs" />
+    <Compile Include="Mapping\Categories\SN_STATUSMap.cs" />
+    <Compile Include="Mapping\Categories\SN_CONTROL_LOGMap.cs" />
+    <Compile Include="Mapping\Categories\SN_CONTROLMap.cs" />
+    <Compile Include="Mapping\Categories\LINEMap.cs" />
+    <Compile Include="Mapping\Categories\DEPARTMENTMap.cs" />
+    <Compile Include="Mapping\Categories\l_os_scrap_reasonMap.cs" />
+    <Compile Include="Mapping\Categories\l_os_reason_functionMap.cs" />
+    <Compile Include="Mapping\Categories\l_os_failure_detectionMap.cs" />
+    <Compile Include="Mapping\Categories\l_os_failure_codeMap.cs" />
+    <Compile Include="Mapping\Categories\PARTTERNMap.cs" />
+    <Compile Include="Mapping\Categories\CATEGORYMap.cs" />
+    <Compile Include="Mapping\Categories\FACTORYMap.cs" />
+    <Compile Include="Mapping\Categories\REASONMap.cs" />
+    <Compile Include="Mapping\Categories\RR_TOOL_INFOMap.cs" />
+    <Compile Include="Mapping\Categories\SECTIONMap.cs" />
+    <Compile Include="Mapping\Categories\l_os_cc_functionMap.cs" />
+    <Compile Include="Mapping\Categories\STATUSMap.cs" />
+    <Compile Include="Mapping\Categories\StorageCodeMap.cs" />
+    <Compile Include="Mapping\Categories\WHCodeMap.cs" />
+    <Compile Include="Mapping\Categories\WH_STORAGE_INFOMap.cs" />
+    <Compile Include="Mapping\Categories\SN_PRODUCTMap.cs" />
+    <Compile Include="Mapping\Logging\SystemLogMap.cs" />
+    <Compile Include="Mapping\Settings\SN_CONFIGMap.cs" />
+    <Compile Include="Mapping\Settings\MG_CONFIGMap.cs" />
+    <Compile Include="Mapping\Logging\MG_TYPE_ACTIONMap.cs" />
+    <Compile Include="Mapping\Logging\MG_HISTORY_ACTIONMap.cs" />
+    <Compile Include="Mapping\Logging\MG_HISTORY_LOGINMap.cs" />
+    <Compile Include="Mapping\NopEntityTypeConfiguration.cs" />
+    <Compile Include="Mapping\Authorize\MG_USERMap.cs" />
+    <Compile Include="NopObjectContext.cs" />
+    <Compile Include="QueryableExtensions.cs" />
+    <Compile Include="SqlServerDataProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nop.Core\Nop.Core.csproj">
+      <Project>{3edaa3bb-5739-42df-aea8-cf2e47b997d9}</Project>
+      <Name>Nop.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mapping\Staffs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
